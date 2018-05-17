@@ -1,0 +1,24 @@
+<div class='ambassadors'>
+<h2>Ambassadors</h2>
+<button class='btn btn-large'>{{#link-to 'new-ambassador'}}+ add ambassador{{/link-to}}</button>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">email</th>
+      <th scope="col">name</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each ambassadors as |ambassador|}}
+      <tr>
+        <th scope="row">{{ambassador.id}}</th>
+        <td>{{#link-to 'ambassador' ambassador.uid}}{{ambassador.email}}{{/link-to}}</td>
+        <td>{{ambassador.name}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
+
+{{outlet}}

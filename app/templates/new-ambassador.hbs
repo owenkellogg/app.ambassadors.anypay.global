@@ -1,0 +1,31 @@
+
+<div class='col-12 col-md-9 col-xl-8 py-md-3 pl-md-5'>
+  <form class='form' onsubmit={{action 'create'}}>
+    <div class="form-group">
+    <fieldset>
+      <legend>New Ambassador</legend>
+    </fieldset>
+
+    <p>
+      <label for='name'>Name</label>
+      {{input class='form-control' id='name' type='text' value=name}}
+    </p>
+    </div>
+
+    <p>
+      <label for='email'>Email</label>
+      {{input class='form-control' id='email' type='text' value=email}}
+    </p>
+
+    <p>
+      <label for='dashaddress'>Dash Address</label>
+      {{input class='form-control' id='dashaddress' type='text' value=dashaddress}}
+     <small id="emailHelp" class="form-text text-muted">Dash reward will be paid to this address.</small>
+    </p>
+
+    <input type='submit'/>
+
+  </form>
+</div>
+
+{{outlet}}

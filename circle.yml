@@ -1,0 +1,28 @@
+
+machine:
+  services:
+    - docker
+  node:
+    version: v6.10.1
+
+dependencies:
+  pre:
+    - npm install -g bower
+    - npm install -g phantomjs-prebuilt
+  override:
+    - npm install
+    - bower install
+    - npm run build
+    - docker build -t ambassadors .
+
+test:
+  override:
+    - npm test
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - docker tag ambassadors anypay/app.ambassadors.anypay.global:latest
+      - ./push_to_docker.sh
+      - ssh defaultuser@ambassadors.anypay.global "sudo chef-client -o 'recipe[app.ambassadors.anypay.global::default]'"

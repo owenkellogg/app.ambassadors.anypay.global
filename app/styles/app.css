@@ -1,0 +1,39 @@
+
+h2 {
+  text-align:center;
+}
+
+.ambassador {
+  text-align:center;
+}
+
+.ambassador img{
+  margin: 0 auto;
+}
+
+.ambassadors {
+  text-align:center
+}
+
+.ambassadors button{
+  margin: 1em;
+}
+
+#logout-link {
+  text-align:right;
+  float:right;
+  padding:1em;
+  color:white;
+}
+
+.four-oh-four {
+  padding-top:3em;
+}
+
+.four-oh-four h1 {
+  text-align:center;
+}
+
+.form-register-error {
+  margin: 1em;
+}

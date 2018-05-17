@@ -1,0 +1,26 @@
+<div class="container">
+   <div class="row">
+      <div class="col-sm-12" id="login">
+         <h1>Login</h1>
+         <div class="input-group">
+            {{#if errorMessage}}
+              <p class="form-register-error">{{errorMessage}}</p>
+            {{/if}}
+
+            <form  {{action 'authenticate' on='submit'}}>
+
+ 			{{input type="password" id='password' placeholder='admin key' value=password
+            class="form-control"}}
+
+      <br/>
+ 			<button type="submit" class="login btn btn-default" aria-label="Left Align">
+            <h4 class="bold">Submit</h4>
+            </button>
+
+            </form>
+
+         </div>
+      </div>
+   </div>
+</div>
+{{outlet}}
